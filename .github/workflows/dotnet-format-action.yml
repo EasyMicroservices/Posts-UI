@@ -15,6 +15,7 @@ jobs:
           dotnet-version:  |
             6.0.x
             7.0.x
+            8.0.x
       - name: Run dotnet format
         id: format
         uses: jfversluis/dotnet-format@v1.0.5
@@ -32,7 +33,11 @@ jobs:
       - name: Test
         run:  |
           dotnet test ./src/CSharp/EasyMicroservices.UI.Posts.Blazor.sln -f net6.0
+          dotnet test ./src/CSharp/EasyMicroservices.UI.Posts.Blazor.sln -f net7.0
+          dotnet test ./src/CSharp/EasyMicroservices.UI.Posts.Blazor.sln -f net8.0
+          dotnet test ./src/CSharp/EasyMicroservices.UI.Posts.Core.sln -f net6.0
           dotnet test ./src/CSharp/EasyMicroservices.UI.Posts.Core.sln -f net7.0
+          dotnet test ./src/CSharp/EasyMicroservices.UI.Posts.Core.sln -f net8.0
       - name: Commit files
         if: steps.format.outputs.has-changes == 'true'
         uses: EndBug/add-and-commit@v4.1.0
