@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+    <Authors>EasyMicroservices</Authors>
+    <IsPackable>true</IsPackable>
+    <Version>0.0.0.1</Version>
+    <Description>Posts view model.</Description>
+    <Copyright>EasyMicroservices@gmail.com</Copyright>
+    <PackageTags>mvvm,viewmodel,viewmodels,modelviewviewmodel,ui,core,posts,post</PackageTags>
+    <PackageProjectUrl>https://github.com/EasyMicroservices/Posts-UI</PackageProjectUrl>
+    <LangVersion>latest</LangVersion>
+    <DocumentationFile>.\bin\$(Configuration)\$(TargetFramework)\EasyMicroservices.UI.Posts.ViewModels.xml</DocumentationFile>
+    <RootNamespace>EasyMicroservices.UI.Posts</RootNamespace>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EasyMicroservices.PostsMicroservice.Clients" Version="0.0.0.1" />
+    <PackageReference Include="EasyMicroservices.UI.Cores.Mvvm" Version="0.0.0.7" />
+  </ItemGroup>
+
+</Project>
